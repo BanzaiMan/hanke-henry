@@ -1,3 +1,5 @@
+# There is no functional code written yet.
+
 # Hanke-Henry Calendar
 
 `hanke-henry-calender` is a gem that deals with the proposed
