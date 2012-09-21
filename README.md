@@ -7,12 +7,19 @@
 This calendar has the following preferable characteristics over
 the presently adopted Gregorian Calendar:
 
+1. Calendar remains identical year after year.
 1. No time zones.
 1. No Daylight Savings Time.
-1. Dates will fall on the same weekday.
 
-`hanke-henry-calendar` extends the Date class to deal with this
+Basically, the idea is to gather the leap days into chunks of 7, which will
+form a mini-month (called _Xtr_) at the end of the year.
+This will allow consistent number of days in each month year after year,
+except those in _Xtrs_.
+
+`hanke-henry-calendar` extends the Date and DateTime classes to deal with this
 calendar.
+
+
 
 ## Installation
 
