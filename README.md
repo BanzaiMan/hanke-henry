@@ -11,10 +11,16 @@ the presently adopted Gregorian Calendar:
 1. No time zones.
 1. No Daylight Savings Time.
 
-Basically, the idea is to gather the leap days into chunks of 7, which will
-form a mini-month (called _Xtr_) at the end of the year.
+The typical year in the current Gregorian calendar has 365 days, which is 52
+weeks and 1 day.
+The leap years occur every 4 years (with some exceptions).
+The basic idea of the Hanke-Henry calendar is to gather the overflow day of the
+typical year and the leap days and into chunks of 7, which will
+form a mini-month (called _Xtr_) at the end of the year every so often.
 This will allow consistent number of days in each month year after year,
 except those in _Xtrs_.
+
+The H-H calendar also proposes to abolish time zones and Daylight Savings Time.
 
 `hanke-henry-calendar` extends the Date and DateTime classes to deal with this
 calendar.
