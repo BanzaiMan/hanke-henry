@@ -1,5 +1,3 @@
-# There is no functional code written yet.
-
 # Hanke-Henry Calendar
 
 `hanke-henry-calender` is a gem that deals with the proposed
@@ -20,7 +18,8 @@ form a mini-month (called _Xtr_) at the end of the year every so often.
 This will allow consistent number of days in each month year after year,
 except those in _Xtrs_.
 
-The H-H calendar also proposes to abolish time zones and Daylight Savings Time.
+The H-H calendar also proposes to abolish time zones and Daylight Savings Time,
+essentially standardizing on the current UTC.
 
 `hanke-henry-calendar` extends the Date and DateTime classes to deal with this
 calendar.
