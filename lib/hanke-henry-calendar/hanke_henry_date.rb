@@ -1,16 +1,4 @@
 class HankeHenryDate < Date
-  def initialize(*args)
-    
-  end
-  
-  # Retruns self
-  def hhdate
-    self
-  end
-  
-  def now
-    
-  end
   
   # HankeHenryDate.xtr?(year)
   # returns true if year contains the 'Xtr' mini-month
