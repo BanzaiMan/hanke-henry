@@ -13,7 +13,7 @@ class DateTime
      398
   ]
   
-  ## number of days since January 1 (of Hanke-Henry year) for month before
+  ## number of days since January 1 (of Hanke-Henry year) before
   ## the first of the H-H month
   DAYS_SINCE_NEW_YEAR = {
     :"1"  =>   0,
