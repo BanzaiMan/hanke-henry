@@ -44,7 +44,9 @@ class DateTime
   # Returns true if year designated by +DateTime+ object
   # contains the Xtr week
   def xtr?
-    ::HankeHenryDate.xtr?(@hh_year)
+    # FIXME: it is quite possible that this method is called on an object
+    # that doesn't have @hh_year
+    XTR_YEARS.include? @hh_year % 400
   end
   
   private
