@@ -70,4 +70,10 @@ described in `LICENSE.txt`.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+### Development
+    git clone git://github.com/BanzaiMan/hanke-henry-calendar.git
+    cd hanke-henry-calendar
+    bundle install
+    bundle exec autotest
+
 [1]: http://henry.pha.jhu.edu/calendar.html
