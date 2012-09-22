@@ -14,9 +14,9 @@ describe 'DateTime' do
       end
     end
     
-    context 'when more than 6 arguments are passed' do
+    context 'when more than 8 arguments are passed' do
       it 'raises ArgumentError' do
-        lambda { DateTime.hh(2012, 1, 2, 3, 4, 5, 6) }.should raise_error ArgumentError
+        lambda { DateTime.hh(2012, 1, 2, 3, 4, 5, 6, 7, 8) }.should raise_error ArgumentError
       end
     end
     
