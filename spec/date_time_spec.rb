@@ -44,7 +44,7 @@ describe 'DateTime' do
   end
   
   describe '#xtr?' do
-    context 'when called on a normal DateTime object' do
+    context 'when called on a normal DateTime object with year 2012' do
       let(:subject) { DateTime.new(2012) }
       it 'returns false' do
         subject.xtr?.should be_false
