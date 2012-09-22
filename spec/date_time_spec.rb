@@ -28,7 +28,15 @@ describe 'DateTime' do
 
     context 'when :x is passed as month for a non-Xtr year' do
       it 'raises ArgumentError' do
-        lambda { DateTime.hh(2012, :x, 2, 3, 4, 5, 6) }.should raise_error ArgumentError
+        lambda { DateTime.hh(2012, :x, 2, 3, 4, 5) }.should raise_error ArgumentError
+      end
+    end
+    
+    context 'when :x is passed as month for an Xtr year' do
+      let(:subject) { DateTime.hh(2015, :x, 2, 3, 4, 5) }
+      it 'returns a valid Date object' do
+        subject.should be_true
+        subject.should be_a DateTime
       end
     end
     
