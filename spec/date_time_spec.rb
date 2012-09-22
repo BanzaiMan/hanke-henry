@@ -22,6 +22,7 @@ describe 'DateTime' do
     
     context 'when invalid day is passed' do
       it 'raises ArgumentError' do
+        lambda { DateTime.hh(2015, :"7", 31) }.should raise_error ArgumentError
         lambda { DateTime.hh(2012, 7, 31) }.should raise_error ArgumentError
         lambda { DateTime.hh(2015, :x, 8) }.should raise_error ArgumentError
       end

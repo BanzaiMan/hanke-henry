@@ -87,7 +87,7 @@ class DateTime
       unless ::HankeHenryDate.xtr?(year)
         raise ArgumentError, "Hanke-Henry year #{year} does not have Xtr"
       end
-    elsif month % 3 == 0 # month is 3, 6, 9 or 12
+    elsif month.to_s.to_i % 3 == 0 # month is 3, 6, 9 or 12
       days_in_month = 31
     else
       days_in_month = 30
