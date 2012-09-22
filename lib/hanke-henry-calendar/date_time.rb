@@ -82,12 +82,16 @@ class DateTime
     minute ||= 0
     second ||= 0
     
-    if month.to_s.to_sym == :x
+    unless month.to_s.to_sym == :x or (1..12).include? month
+      raise ArgumentError, "second argument should be :x or integer from 1 to 12"
+    end
+    
+    if month == :x
       days_in_month = 7
-      unless ::HankeHenryDate.xtr?(year)
+      unless XTR_YEARS.include? year % 400
         raise ArgumentError, "Hanke-Henry year #{year} does not have Xtr"
       end
-    elsif month.to_s.to_i % 3 == 0 # month is 3, 6, 9 or 12
+    elsif month % 3 == 0 # month is 3, 6, 9 or 12
       days_in_month = 31
     else
       days_in_month = 30
