@@ -1,4 +1,4 @@
-require 'autotest/fsevent'
+require 'autotest/bundler'
 
 Autotest.add_hook(:initialize) {|at|
   at.add_exception %r{^\.git}  # ignore Version Control System

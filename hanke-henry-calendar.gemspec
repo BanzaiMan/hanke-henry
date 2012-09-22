@@ -20,5 +20,4 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rspec', '>= 2.0'
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'autotest'
-  gem.add_development_dependency 'autotest-fsevent'
 end
