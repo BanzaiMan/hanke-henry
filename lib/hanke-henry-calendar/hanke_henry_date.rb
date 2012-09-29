@@ -1,7 +1,10 @@
 require 'date'
 
+##
+# This module extends Date and DateTime classes to represent the Hanke-Henry
+# calendar.
+#
 module HankeHenryDate  
-  ## These are the years (mod 400) that have Xtr
   XTR_YEARS = [
        4,   9,  15,  20,  26,  32,  37,  43,  48,  54,  60,  65,  71,  76,
       82,  88,  93,  99, 105, 111, 116, 122, 128, 133, 139, 144, 150, 156,
@@ -63,7 +66,14 @@ module HankeHenryDate
   
   HH_OFFSET = 1721423.5 # Julian date for Jan 1, 0 (on H-H calendar)
 
+  ##
+  # This is a module used for extending Date and DateTime classes to include
+  # class method +.hh+ that takes arguments representing Hanke-Henry calendar
+  # dates and returns Date and DateTime objects.
+  #
   module Module
+    ##
+    # 
     def hh(*args)
       hh_year, hh_month, hh_day, hour, minute, second = _validate(*args)
       DateTime.jd _to_julian_date(hh_year, hh_month, hh_day)
@@ -134,19 +144,24 @@ module HankeHenryDate
 
   end
 
-  # Returns true if year designated by +DateTime+ object
-  # contains the Xtr week
+  ##
+  # +#xtr?+ returns true if the +DateTime+ object falls in a Hanke-Henry year
+  # which contains the Xtr week.
+  #
   def xtr?
     XTR_YEARS.include?((_from_julian_date(self.jd)[0]) % 400)
   end
   
+  ##
+  # +hh+ returns a string representation of the Hanke-Henry date.
+  #
   def hh
     "%d-%0s-%0d" % _from_julian_date(self.jd)
   end
   
   private
   
-  ## given Julian date jd, compute H-H date
+  # given Julian date jd, compute H-H date
   def _from_julian_date(jd)
     year = (jd - HH_OFFSET).floor / DAYS_IN_COMPLETE_CYCLE * 400
     day  = (jd - HH_OFFSET).floor % DAYS_IN_COMPLETE_CYCLE # remainining days
