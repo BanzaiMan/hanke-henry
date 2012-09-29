@@ -67,7 +67,7 @@ module HankeHenryDate
   HH_OFFSET = 1721423.5 # Julian date for Jan 1, 0 (on H-H calendar)
 
   ##
-  # This is a module used for extending Date and DateTime classes to include
+  # This module is used for extending Date and DateTime classes to include
   # class method +.hh+ that takes arguments representing Hanke-Henry calendar
   # dates and returns Date and DateTime objects.
   #
