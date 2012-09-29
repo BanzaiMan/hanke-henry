@@ -5,6 +5,7 @@ class HHDate < Date
   extend HankeHenryDate::Module
   include HankeHenryDate
   
+  private
   def self._hh_arg_limit
     4
   end
@@ -39,6 +40,7 @@ describe 'HHDate' do
     context 'when argument limit is altered' do
       it 'respects the new limit' do
         class HHDate
+          private
           def self._hh_arg_limit
             8
           end
