@@ -77,8 +77,8 @@ module HankeHenryDate
     end
     
     def _validate(*args)
-      if args.length > _arg_limit
-        raise ArgumentError, "Wrong number of arguments (#{args.length} for 0..#{_arg_limit})"
+      if args.length > _hh_arg_limit
+        raise ArgumentError, "Wrong number of arguments (#{args.length} for 0..#{_hh_arg_limit})"
       end
     
       year, month, day, hour, minute, second = args

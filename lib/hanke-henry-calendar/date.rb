@@ -4,7 +4,7 @@ class Date
   extend HankeHenryDate::Module
   include HankeHenryDate
   
-  def self._arg_limit
+  def self._hh_arg_limit
     4
   end
 end
