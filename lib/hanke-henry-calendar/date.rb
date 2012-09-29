@@ -72,7 +72,7 @@ class Date
   # Returns true if year designated by +Date+ object
   # contains the Xtr week
   def xtr?
-    XTR_YEARS.include? (_from_julian_date(self.jd)[0]) % 400
+    XTR_YEARS.include?((_from_julian_date(self.jd)[0]) % 400)
   end
   
   def hh_year
