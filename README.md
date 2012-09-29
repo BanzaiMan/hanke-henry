@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/BanzaiMan/hanke-henry-calendar.png)](http://travis-ci.org/BanzaiMan/hanke-henry-calendar)
+
 # Hanke-Henry Calendar
 
 `hanke-henry-calender` is a gem that deals with the proposed
