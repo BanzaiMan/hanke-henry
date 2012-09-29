@@ -140,18 +140,6 @@ module HankeHenryDate
     XTR_YEARS.include?((_from_julian_date(self.jd)[0]) % 400)
   end
   
-  def hh_year
-    _from_julian_date(self.jd)[0]
-  end
-  
-  def hh_month
-    _from_julian_date(self.jd)[1]
-  end
-  
-  def hh_day
-    _from_julian_date(self.jd)[2]
-  end
-  
   def hh
     "%d-%0s-%0d" % _from_julian_date(self.jd)
   end
