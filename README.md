@@ -42,21 +42,7 @@ Or install it yourself as:
 
 ## Usage
 
-    require 'date'
-    require 'hanke-henry-calendar'
-    
-    now = Date.now # => 
-    now.hhyear     # => 
-    now.hhmonth    # =>
-    now.hhday      # => 
-    
-    hhnow = HankeHenryDate.now # =>
-    hhnow.year     # => year in Gregorian calendar
-    hhnow.hhyear   # =>
-    
-    hhtime = HankeHenryDate.new(2012, 1, 1, 0, 0) # given in Hanke-Henry calendar date
-    hhtime.hhyear  # => 2012
-    
+    require 'hanke-henry-calendar' # requires 'date' as well
 
 ## Contributing
 By contributing, you certify that you have full legal rights to your
