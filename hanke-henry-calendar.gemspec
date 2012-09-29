@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = HankeHenryCalendar::VERSION
   gem.authors       = ["Hirotsugu Asari"]
   gem.email         = ["asari.ruby@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Date and DateTime extensions for the Hanke-Henry Calendar}
+  gem.summary       = gem.description
   gem.homepage      = "http://github.com/BanzaiMan/hanke-henry-calendar"
 
   gem.files         = `git ls-files`.split($/)
