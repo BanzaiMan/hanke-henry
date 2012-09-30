@@ -113,7 +113,6 @@ module HankeHenryDate
           raise ArgumentError, "Hanke-Henry year #{year} does not have Xtr"
         end
         days_in_month = 7
-        months_in_year = 13
       elsif month % 3 == 0 # month is 3, 6, 9 or 12
         days_in_month = 31
       else
