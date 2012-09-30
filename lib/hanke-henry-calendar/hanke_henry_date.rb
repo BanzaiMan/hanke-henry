@@ -87,7 +87,7 @@ module HankeHenryDate
     end
     
     def _validate(*args)
-      if args.length > _hh_arg_limit
+      if args.length > (_hh_arg_limit || 4)
         raise ArgumentError, "Wrong number of arguments (#{args.length} for 0..#{_hh_arg_limit})"
       end
     
