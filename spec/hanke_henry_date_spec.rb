@@ -13,20 +13,36 @@ end
 
 describe 'HHDate' do
   describe '.hh' do
+    context 'valid parameters are passed' do
+      it 'does not raise error' do
+        HHDate.hh(2012,   1,  1).should be_a Date
+        HHDate.hh(2015, -13,  1).should be_a Date
+        HHDate.hh(2012,   1, -1).should be_a Date
+      end
+    end
+    
     context 'when passed 2012, 1, 1' do
       before :each do
         @date = HHDate.hh(2012, 1, 1)
       end
-    
-      it 'creates a Date object' do
-        @date.should be_true
-        @date.should be_a Date
-      end
       
       describe '#jd' do
         let(:subject) { @date.jd }
-        it 'returns the same value as HHDate.new(2012,1,1).jd' do
-          subject.should == HHDate.new(2012,1,1).jd
+        it 'returns the same value as Date.new(2012,1,1).jd' do
+          subject.should == Date.new(2012,1,1).jd
+        end
+      end
+    end
+    
+    context 'when passed 2012, 1, -1' do
+      before :each do
+        @date = HHDate.hh(2012, 1, -1)
+      end
+    
+      describe '#jd' do
+        let(:subject) { @date.jd }
+        it 'returns the same value as HHDate.new(2012,1,30)' do
+          subject.should == HHDate.new(2012,1,30).jd
         end
       end
     end
@@ -46,14 +62,24 @@ describe 'HHDate' do
           end
         end
         lambda { HHDate.hh(2012, 1, 2, 3, 4, 5, 6, 7, 8) }.should raise_error ArgumentError
+        
+        class HHDate2 < HHDate
+          private
+          def self._hh_arg_limit
+            5
+          end
+        end
+        lambda { HHDate2.hh(2012, 1, 2, 3, 4, 5) }.should raise_error ArgumentError
       end
     end
     
     context 'when invalid day is passed' do
       it 'raises ArgumentError' do
         lambda { HHDate.hh(2015, :"7", 31) }.should raise_error ArgumentError
-        lambda { HHDate.hh(2012, 7, 31) }.should raise_error ArgumentError
-        lambda { HHDate.hh(2015, :x, 8) }.should raise_error ArgumentError
+        lambda { HHDate.hh(2012,    7, 31) }.should raise_error ArgumentError
+        lambda { HHDate.hh(2012,    1, 31) }.should raise_error ArgumentError
+        lambda { HHDate.hh(2012,  -13,  1) }.should raise_error ArgumentError
+        lambda { HHDate.hh(2015,   :x,  8) }.should raise_error ArgumentError
       end
     end
 
