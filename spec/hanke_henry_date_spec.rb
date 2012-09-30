@@ -80,6 +80,8 @@ describe 'HHDate' do
         lambda { HHDate.hh(2012,    1, 31) }.should raise_error ArgumentError
         lambda { HHDate.hh(2012,  -13,  1) }.should raise_error ArgumentError
         lambda { HHDate.hh(2015,   :x,  8) }.should raise_error ArgumentError
+        lambda { HHDate.hh(2012,    0,  8) }.should raise_error ArgumentError
+        lambda { HHDate.hh(2012,    1,  0) }.should raise_error ArgumentError
       end
     end
 
