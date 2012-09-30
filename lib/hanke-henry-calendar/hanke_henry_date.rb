@@ -64,7 +64,7 @@ module HankeHenryDate
   
   DAYS_SINCE_NEW_YEAR = [0, 30, 60, 91, 121, 151, 182, 212, 242, 273, 303, 333, 364]
   
-  HH_OFFSET = 1721423.5 # Julian date for Jan 1, 0 (on H-H calendar)
+  HH_OFFSET = 1721423.5 # Julian date for Jan 1, 1 (on H-H calendar)
 
   ##
   # This module is used for extending Date and DateTime classes to include
