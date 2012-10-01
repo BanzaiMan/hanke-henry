@@ -148,3 +148,24 @@ describe 'HHDate' do
     end
   end
 end
+
+class HHDateTime < DateTime
+  extend HankeHenryDate::Module
+  include HankeHenryDate
+  
+  private
+  def self._hh_arg_limit
+    8
+  end
+end
+
+describe 'HHDateTime' do
+  describe '.hh' do
+    context 'valid parameters are passed' do
+      it 'does not raise error' do
+        HHDateTime.hh(2012,   1,  1).should be_a DateTime
+        HHDateTime.hh(2015, -13,  1).should be_a DateTime
+      end
+    end
+  end
+end

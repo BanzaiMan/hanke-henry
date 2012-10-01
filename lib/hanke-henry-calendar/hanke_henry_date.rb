@@ -76,7 +76,13 @@ module HankeHenryDate
     # 
     def hh(*args)
       hh_year, hh_month, hh_day, hour, minute, second = _validate(*args)
-      DateTime.jd _to_julian_date(hh_year, hh_month, hh_day)
+      julian = _to_julian_date(hh_year, hh_month, hh_day)
+      if self.ancestors.include? DateTime
+        d = DateTime.jd julian
+        DateTime.new(d.year, d.month, d.day, hour, minute, second)
+      else
+        Date.jd julian
+      end
     end
     
     private
