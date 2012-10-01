@@ -197,6 +197,4 @@ module HankeHenryDate
     
     [year, month, day]
   end
-  
-  
 end
