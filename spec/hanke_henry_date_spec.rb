@@ -17,7 +17,7 @@ describe 'HHDate' do
       it 'does not raise error' do
         HHDate.hh(2012,   1,  1).should be_a Date
         HHDate.hh(2015, -13,  1).should be_a Date
-        HHDate.hh(2012,   1, -1).should be_a Date
+        HHDate.hh(2012,   1,  1).should_not be_a DateTime
       end
     end
     
