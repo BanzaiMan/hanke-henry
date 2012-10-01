@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/BanzaiMan/hanke-henry-calendar.png)](http://travis-ci.org/BanzaiMan/hanke-henry-calendar)
+[![Build Status](https://secure.travis-ci.org/BanzaiMan/hanke-henry.png)](http://travis-ci.org/BanzaiMan/hanke-henry)
 
 # Hanke-Henry Calendar
 
@@ -21,7 +21,7 @@ mini-month (called _Xtr_) at the end of the year every so often.
 The H-H calendar also proposes to abolish time zones and Daylight Savings Time,
 essentially standardizing on the current UTC.
 
-`hanke-henry-calendar` extends the Date and DateTime classes to deal with this
+`hanke-henry` extends the Date and DateTime classes to deal with this
 calendar.
 
 ## Installation
@@ -59,8 +59,8 @@ described in `LICENSE.txt`.
 5. Create new Pull Request
 
 ### Development
-    git clone git://github.com/BanzaiMan/hanke-henry-calendar.git
-    cd hanke-henry-calendar
+    git clone git://github.com/BanzaiMan/hanke-henry.git
+    cd hanke-henry
     bundle install
     bundle exec autotest
 

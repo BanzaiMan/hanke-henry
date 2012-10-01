@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["asari.ruby@gmail.com"]
   gem.description   = %q{Date and DateTime extensions for the Hanke-Henry Calendar}
   gem.summary       = gem.description
-  gem.homepage      = "http://github.com/BanzaiMan/hanke-henry-calendar"
+  gem.homepage      = "http://github.com/BanzaiMan/hanke-henry"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
