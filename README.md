@@ -26,8 +26,6 @@ essentially standardizing on the current UTC.
 `hanke-henry-calendar` extends the Date and DateTime classes to deal with this
 calendar.
 
-
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -45,6 +43,11 @@ Or install it yourself as:
 ## Usage
 
     require 'hanke-henry' # requires 'date' as well
+    d1 = Date.hh(2012, 1, 1) # => #<Date: 2012-01-01 ((2455928j,0s,0n),+0s,2299161j)>
+    d1.hh # => "2012-1-1"
+    d1.xtr? # => false
+    d2 = Date.hh(2015, :x, 5) # => #<Date: 2015-12-31 ((2457388j,43200s,0n),+0s,2299161j)>
+    d2.xtr? # => true
 
 ## Contributing
 By contributing, you certify that you have full legal rights to your
