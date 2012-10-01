@@ -32,7 +32,7 @@ calendar.
 
 Add this line to your application's Gemfile:
 
-    gem 'hanke-henry-calendar'
+    gem 'hanke-henry'
 
 And then execute:
 
@@ -40,11 +40,11 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install hanke-henry-calendar
+    $ gem install hanke-henry
 
 ## Usage
 
-    require 'hanke-henry-calendar' # requires 'date' as well
+    require 'hanke-henry' # requires 'date' as well
 
 ## Contributing
 By contributing, you certify that you have full legal rights to your

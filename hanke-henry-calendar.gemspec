@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'hanke-henry-calendar/version'
+require 'hanke-henry/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "hanke-henry-calendar"
-  gem.version       = HankeHenryCalendar::VERSION
+  gem.name          = "hanke-henry"
+  gem.version       = HankeHenry::VERSION
   gem.authors       = ["Hirotsugu Asari"]
   gem.email         = ["asari.ruby@gmail.com"]
   gem.description   = %q{Date and DateTime extensions for the Hanke-Henry Calendar}

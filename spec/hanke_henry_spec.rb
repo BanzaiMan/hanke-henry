@@ -1,5 +1,5 @@
 require 'rspec'
-require 'hanke-henry-calendar'
+require 'hanke-henry'
 
 class HHDate < Date
   extend HankeHenryDate::Module
