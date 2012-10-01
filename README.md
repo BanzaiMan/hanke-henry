@@ -2,7 +2,7 @@
 
 # Hanke-Henry Calendar
 
-`hanke-henry-calender` is a gem that deals with the proposed
+`hanke-henry` is a gem that deals with the proposed
 [Hanke-Henry Calendar][1].
 This calendar has the following preferable characteristics over
 the presently adopted Gregorian Calendar:
