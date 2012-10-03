@@ -1,4 +1,5 @@
 [![Build Status](https://secure.travis-ci.org/BanzaiMan/hanke-henry.png)](http://travis-ci.org/BanzaiMan/hanke-henry)
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/BanzaiMan/hanke-henry)
 
 # Hanke-Henry Calendar
 
