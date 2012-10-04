@@ -108,31 +108,22 @@ module HankeHenryDate
       second ||= 0
       months_in_year = (XTR_YEARS.include? year % 400)? 13 : 12
     
-      if (month = month.to_s) == 'x'
-        month = 13
-      else
-        month = month.to_i
-      end
+      month = (month = month.to_s) == 'x' ? 13 : month.to_i
     
-      if month == 13
-        unless XTR_YEARS.include? year % 400
-          raise ArgumentError, "Hanke-Henry year #{year} does not have Xtr"
-        end
-        days_in_month = 7
-      elsif month % 3 == 0 # month is 3, 6, 9 or 12
-        days_in_month = 31
-      else
-        days_in_month = 30
+      if month == 13 and ! XTR_YEARS.include? year % 400
+        raise ArgumentError, "Hanke-Henry year #{year} does not have Xtr"
       end
       
-      if day > days_in_month || day < -days_in_month || month > months_in_year ||
+      days_in = [0, 30, 30, 31, 30, 30, 31, 30, 30, 31, 30, 30, 31, 7]
+      
+      if day > days_in[month] || day < -days_in[month] || month > months_in_year ||
         month < -months_in_year || month == 0 || day == 0
         raise ArgumentError, 'invalid date'
-      else
-        # handle cases where month or day is negative
-        month %= (months_in_year + 1)
-        day   %= (days_in_month + 1)
       end
+
+      # handle cases where month or day is negative
+      month %= (months_in_year + 1)
+      day   %= (days_in[month] + 1)
     
       [ year, month, day, hour, minute, second ]
     end
