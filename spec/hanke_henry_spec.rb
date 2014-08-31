@@ -94,7 +94,6 @@ describe 'HHDate' do
     context 'when :x is passed as month for an Xtr year' do
       let(:subject) { HHDate.hh(2015, :x, 2, 3) }
       it 'returns a valid Date object' do
-        subject.should be_true
         subject.should be_a Date
       end
     end
@@ -136,14 +135,14 @@ describe 'HHDate' do
     context 'when called on a normal HHDate object with year 2012' do
       let(:subject) { HHDate.new(2012) }
       it 'returns false' do
-        subject.xtr?.should be_false
+        subject.xtr?.should eq false
       end
     end
     
     context 'when called on a HHDate object for year 2015' do
       let(:subject) { HHDate.hh(2015) }
       it 'returns true' do
-        subject.xtr?.should be_true
+        subject.xtr?.should eq true
       end
     end
   end
